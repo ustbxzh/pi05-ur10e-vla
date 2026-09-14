@@ -1,0 +1,15 @@
+policy_server:
+  host: 127.0.0.1
+  port: 8000
+checkpoint: TODO_LOCAL_LORA_CHECKPOINT
+openpi_config: pi05_ur10e_gamepad_lora
+control_frequency_hz: 20
+prediction_horizon: 20
+execution_horizon: 10
+rtc:
+  mode: off
+  prefix_len: 2
+  decay_end: 4
+  schedule: exp
+  max_guidance_weight: 5.0
+

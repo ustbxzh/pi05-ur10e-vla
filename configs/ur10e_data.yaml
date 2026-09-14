@@ -1,0 +1,18 @@
+# Fixed project contract. Change repo_id before collecting or training.
+repo_id: your_hf_username/ur10e_gamepad_demonstrations
+robot_type: ur10e
+fps: 20
+image_keys:
+  - observation.images.base_0_rgb
+  - observation.images.left_wrist_0_rgb
+state_key: observation.state
+action_key: action
+physical_action_dim: 10
+model_action_dim: 32
+prediction_horizon: 20
+execution_horizon: 10
+state_representation: absolute_base_tcp_xyz_rot6d_normalized_gripper
+action_representation_on_disk: absolute_base_tcp_xyz_rot6d_normalized_gripper
+training_transform: AbsoluteTCPActionsToRelative
+openpi_profile: pi05_ur10e_gamepad_lora
+
